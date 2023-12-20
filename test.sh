@@ -31,9 +31,10 @@ while true; do
     echo "3. Afficher l'IP d'une interface réseau"
     echo "4. Trouver le PID d'un processus par son nom"
     echo "5. IP site web"
-    echo "6. Quitter"
+    echo "6. Découvrir les ports ouverts sur une adresse IP"
+    echo "7. Quitter"
     echo " "
-    read -p "Choisissez une option (1/2/3/4/5/6): " choix
+    read -p "Choisissez une option (1/2/3/4/5/6/7): " choix
     echo " "
 
     case $choix in
@@ -82,6 +83,12 @@ while true; do
             read -p "Appuyez sur une touche pour continuer..." key
             ;;
         6)
+            read -p "Entrez l'adresse IP pour le scan des ports : " ip_scan
+            echo "Scan des ports de l'adresse IP $ip_scan en cours..."
+            nmap $ip_scan
+            read -p "Appuyez sur une touche pour continuer..." key
+            ;;
+        7)
             echo "Au revoir !"
             exit 0
             ;;
