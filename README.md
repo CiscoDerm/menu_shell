@@ -16,7 +16,7 @@ Liste des fonctionnalités clés de votre script. Par exemple :
 ## 📲 Installation 📲
 
 ```bash
-git clone [https://votre-repository/votre-projet.git](https://github.com/CiscoDerm/menu_shell.git)
+git clone https://github.com/CiscoDerm/menu_shell.git
 cd menu_shell
 chmod +x test.sh
 ./test.sh
