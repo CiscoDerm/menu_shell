@@ -14,7 +14,7 @@ Liste des fonctionnalités clés de votre script. Par exemple :
 - Découvrir les ports ouverts sur une adresse IP
 - Analyser les appareils connectés sur le réseau
 - Gestion de la sécurité du réseau (iptables)
-- Menu des imprimantes
+- Menu des imprimantes ⚠️ Attention test de stress des imprimantes sur tout un reseau ⚠️
 - Quitter le programme
 
 ## 📲 Installation 📲
@@ -25,3 +25,4 @@ sudo apt get install nmap
 cd menu_shell
 chmod +x test.sh
 ./test.sh
+
