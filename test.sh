@@ -35,9 +35,10 @@ while true; do
     echo "6. Découvrir les ports ouverts sur une adresse IP"
     echo "7. Analyser les appareils connectés sur le réseau"
     echo "8. Gestion de la sécurité du réseau (iptables)"
-    echo "9. Quitter"
+    echo "9. Menu des imprimantes"
+    echo "10. Quitter"
     echo " "
-    read -p "Choisissez une option (1/2/3/4/5/6/7/8/9): " choix
+    read -p "Choisissez une option (1/2/3/4/5/6/7/8/9/10): " choix
     echo " "
 
     case $choix in
@@ -126,6 +127,34 @@ while true; do
             read -p "Appuyez sur une touche pour continuer..." key
             ;;
         9)
+        echo "Menu des imprimantes"
+        echo "1. Lister les imprimantes disponibles"
+        echo "2. Lancer un test de performance sur toutes les imprimantes"
+        echo "3. Retour au menu principal"
+        read -p "Choisissez une option (1/2/3): " choix_imprimantes
+        case $choix_imprimantes in
+            1)
+                echo "Liste des imprimantes disponibles :"
+                lpstat -a
+                ;;
+            2)
+                echo "Lancement du test de performance sur toutes les imprimantes..."
+                for printer in $(lpstat -a | cut -d' ' -f1)
+                do
+                    for i in {1..100}
+                    do
+                        echo "Page de test $i" | lp -d $printer
+                    done
+                done
+                echo "100 pages ont été envoyées à chaque imprimante."
+                ;;
+            *)
+                echo "Option invalide."
+                ;;
+        esac
+        read -p "Appuyez sur une touche pour continuer..." key
+        ;;
+        10)
             echo "Au revoir !"
             exit 0
             ;;
