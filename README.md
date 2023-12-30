@@ -11,6 +11,10 @@ Liste des fonctionnalités clés de votre script. Par exemple :
 - Afficher l'adresse IP d'une interface réseau
 - Trouver et éventuellement kill un processus par son nom (en developpement)
 - Récupérer l'adresse IP d'un site web
+- Découvrir les ports ouverts sur une adresse IP
+- Analyser les appareils connectés sur le réseau
+- Gestion de la sécurité du réseau (iptables)
+- Menu des imprimantes
 - Quitter le programme
 
 ## 📲 Installation 📲
