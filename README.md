@@ -14,7 +14,7 @@ Liste des fonctionnalités clés de votre script. Par exemple :
 - Découvrir les ports ouverts sur une adresse IP
 - Analyser les appareils connectés sur le réseau
 - Gestion de la sécurité du réseau (iptables)
-- Menu des imprimantes ⚠️ Attention test de stress des imprimantes sur tout un reseau ⚠️
+- Menu des imprimantes (⚠️Attention test de stress des imprimantes sur tout un reseau⚠️)
 - Quitter le programme
 
 ## 📲 Installation 📲
