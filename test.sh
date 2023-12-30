@@ -25,6 +25,7 @@ while true; do
     echo "        \\::/    /                \\::/    /                \\::/    /                \\::/    /        "
     echo "         \\/____/                  \\/____/                  \\/____/                  \\/____/         "
     echo "                                                                                                     "
+    echo "------ By CiscoDerm ------"
     echo "Menu :"
     echo "1. Lister les cartes réseau"
     echo "2. Trouver un fichier"
@@ -32,8 +33,8 @@ while true; do
     echo "4. Trouver le PID d'un processus par son nom"
     echo "5. IP site web"
     echo "6. Découvrir les ports ouverts sur une adresse IP"
-    echo "8. Analyser les appareils connectés sur le réseau"
-    echo "7. Quitter"
+    echo "7. Analyser les appareils connectés sur le réseau"
+    echo "8. Quitter"
     echo " "
     read -p "Choisissez une option (1/2/3/4/5/6/7/8): " choix
     echo " "
@@ -89,12 +90,12 @@ while true; do
             nmap $ip_scan
             read -p "Appuyez sur une touche pour continuer..." key
             ;;
-        8)
+        7)
             echo "Analyse des appareils connectés sur le réseau..."
             sudo arp-scan --localnet
             read -p "Appuyez sur une touche pour continuer..." key
             ;;
-        7)
+        8)
             echo "Au revoir !"
             exit 0
             ;;
