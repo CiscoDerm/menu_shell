@@ -34,9 +34,10 @@ while true; do
     echo "5. IP site web"
     echo "6. Découvrir les ports ouverts sur une adresse IP"
     echo "7. Analyser les appareils connectés sur le réseau"
-    echo "8. Quitter"
+    echo "8. Gestion de la sécurité du réseau (iptables)"
+    echo "9. Quitter"
     echo " "
-    read -p "Choisissez une option (1/2/3/4/5/6/7/8): " choix
+    read -p "Choisissez une option (1/2/3/4/5/6/7/8/9): " choix
     echo " "
 
     case $choix in
@@ -96,6 +97,35 @@ while true; do
             read -p "Appuyez sur une touche pour continuer..." key
             ;;
         8)
+            echo "Gestion de la sécurité du réseau (iptables)"
+            echo "1. Afficher les règles actuelles"
+            echo "2. Ajouter une nouvelle règle"
+            echo "3. Supprimer une règle existante"
+            echo "4. Retour"
+            read -p "Choisissez une sous-option (1/2/3/4): " iptables_choix
+            case $iptables_choix in
+                1)
+                    sudo iptables -L -v -n
+                    ;;
+                2)
+                    read -p "Entrez la commande iptables complète pour ajouter la règle : " iptables_add
+                    sudo $iptables_add
+                    echo "Règle ajoutée."
+                    ;;
+                3)
+                    read -p "Entrez la commande iptables complète pour supprimer la règle : " iptables_del
+                    sudo $iptables_del
+                    echo "Règle supprimée."
+                    ;;
+                4)
+                    ;;
+                *)
+                    echo "Option invalide."
+                    ;;
+            esac
+            read -p "Appuyez sur une touche pour continuer..." key
+            ;;
+        9)
             echo "Au revoir !"
             exit 0
             ;;
