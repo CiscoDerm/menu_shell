@@ -36,9 +36,9 @@ while true; do
     echo "7. Analyser les appareils connectés sur le réseau"
     echo "8. Gestion de la sécurité du réseau (iptables)"
     echo "9. Menu des imprimantes"
-    echo "10. Quitter"
+    echo "Q. Quitter"
     echo " "
-    read -p "Choisissez une option (1/2/3/4/5/6/7/8/9/10): " choix
+    read -p "Choisissez une option (1/2/3/4/5/6/7/8/9/Q): " choix
     echo " "
 
     case $choix in
@@ -154,7 +154,7 @@ while true; do
         esac
         read -p "Appuyez sur une touche pour continuer..." key
         ;;
-        10)
+        Q)
             echo "Au revoir !"
             exit 0
             ;;
