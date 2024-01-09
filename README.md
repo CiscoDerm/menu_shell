@@ -4,7 +4,7 @@ Un beau menu qui nous à été donné comme petit projet à faire en script bash
 
 ## ⚙️ Fonctionnalités ⚙️
 
-Liste des fonctionnalités clés de votre script. Par exemple :
+Liste des fonctionnalitées clés de votre script. Par exemple :
 
 - Lister les cartes réseau
 - Trouver un fichier dans le système
