@@ -44,7 +44,7 @@ while true; do
     case $choix in
         1)
             echo "Liste des cartes réseau disponibles :"
-            ip link show
+            ifconfig 
             read -p "Appuyez sur une touche pour continuer..." key
             ;;
         2)
